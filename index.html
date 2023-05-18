@@ -16,63 +16,75 @@
     <body>
         <main>
             <!-- CONTAINER INSERIMENTO DATI UTENTE -->
-            <div class="container-fluid bg1">
-                <div class="row d-flex justify-content-center mt-4">
-                    <div class="col-12">
-                        <div class="row g-4">
-                            <div class="col-4">
-                                <input type="text" name="name" id="nome-utente" placeholder="Inserisci il tuo nome e cognome">
+            <div class="container-fluid bg">
+                <div class="row text-center">
+                    <h1 class="text-white text-uppercase my-4"><strong>Calcola il prezzo del tuo biglietto!</strong></h1>
+                    <div class="col-12 d-flex justify-content-center">
+                        <form action="#">
+                            <div class="col-12">
+                                <div class="row p-3 bg-white rounded">
+                                    <div class="col-4">
+                                        <label class="text-danger fw-bolder  my-2">Inserire nome e cognome:</label>
+                                        <input type="text" name="name" class="border-danger" id="nome-utente" placeholder="Inserire nome e cognome">
+                                    </div>
+                                    <div class="col-4">
+                                        <label class="text-danger fw-bolder  my-2">KM da percorrere:</label>
+                                        <input type="text" name="km" class="border-danger" id="km" placeholder="Inserire km da percorrere">
+                                    </div>
+                                    <div class="col-4">
+                                        <label class="text-danger border-danger fw-bolder my-2">Seleziona età:</label><br>
+                                        <select name="eta" id="eta">
+                                            <option value="minorenne">minorenne</option>
+                                            <option value="maggiorenne">maggiorenne</option>
+                                            <option value="over65">over 65</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-4">
-                                <input type="text" name="km" id="km" placeholder="Inserisci km da percorrere">
-                            </div>
-                            <div class="col-4">
-                                <form action="#">
-                                    <label for="title">Seleziona età:</label>
-                                    <select name="eta" id="eta">
-                                        <option value="minorenne">minorenne</option>
-                                        <option value="maggiorenne">maggiorenne</option>
-                                        <option value="over65">over 65</option>
-                                    </select>
-                                </form>
+                        </form>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-12 d-flex justify-content-center my-3">
+                        <button type="button" class="btn btn-outline-success bg-success mx-5 text-black fw-bolder" id="submitButton">Genera</button>
+                        <button type="reset" class="btn btn-outline-danger bg-danger text-black fw-bolder">Annulla</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid bg">
+                <div class="row text-center justify-content-center">
+                    <h1 class="text-white text-uppercase my-4"><strong>Ecco il tuo biglietto!</strong></h1>
+                    <div class="col-12 d-flex justify-content-center  my-4">
+                        <div class="row">
+                            <div class="col-12 p-2 bg-white rounded">
+                                <table class="table border-blue">
+                                    <thead>
+                                    <tr class="fw-bolder border-dark">
+                                        <th scope="col">Nome e Cognome</th>
+                                        <th scope="col">Offerta</th>
+                                        <th scope="col">Carrozza</th>
+                                        <th scope="col" >Codice CP</th>
+                                        <th scope="col">Costo Biglietto</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="fw-bolder border-dark">
+                                        <td id="nome_utente_bigl"></td>
+                                        <td id="type_offer"></td>
+                                        <td id="carrozza"></td>
+                                        <td id="codcp"></td>
+                                        <td id="costo"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row d-flex justify-content-center mt-4">
-                    <div class="col-12">
-                        <button type="button" id="submitButton">Genera</button>
-                        <button type="reset">Annulla</button>
-                    </div>
-                </div>
-            </div>
-            <div class="container-fluid bg2">
-                <div class="row">
-                    <div class="col-12">
-                        <table class="table border-blue">
-                            <thead>
-                              <tr>
-                                <th scope="col">Nome e Cognome</th>
-                                <th scope="col">Offerta</th>
-                                <th scope="col">Carrozza</th>
-                                <th scope="col">Codice CP</th>
-                                <th scope="col">Costo Biglietto</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td id="nome_utente_bigl"></td>
-                                <td id="type_offer"></td>
-                                <td id="carrozza"></td>
-                                <td id="codcp"></td>
-                                <td id="costo"></td>
-                              </tr>
-                            </tbody>
-                          </table>
-                    </div>
-                </div>
             </div>
         </main>
+
+        <!-- SCRIPT JAVASCRIPT -->
         <script type="text/javascript" src="./js/script.js"></script>    
     </body>
 </html>

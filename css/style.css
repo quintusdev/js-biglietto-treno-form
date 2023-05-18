@@ -4,26 +4,18 @@
     box-sizing: border-box;
 }
 
-select {
-    margin-bottom: 5px;
-    margin-top: 5px;
-    font-family: cursive, sans-serif;
-    outline: 0;
-    background: #fff;
-    color: #000;
-    border: 1px solid black;
-    padding: 3px;
-    border-radius: 8px;
+body {
+    font-family: 'roboto', sans-serif;
+}
+
+button.rt {
+    margin-left: 100px;
 }
 
 td {
     height: 50px;
 }
 
-.bg1 {
-    background-color: rgb(223, 176, 22);
-}
-
-.bg2 {
-    background-color: rgba(238, 206, 26, 0.808);
+.bg {
+    background-color: #b91450;
 }

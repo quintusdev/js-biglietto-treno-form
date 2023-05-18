@@ -19,7 +19,7 @@ submitBtn.addEventListener('click', function(){
 
     let carrozza = Math.floor(Math.random() * 10 + 1 );
 
-    let codcp = Math.floor(Math.random() * 100 + 1 );
+    let codcp = Math.floor(Math.random() * 10000 + 1 );
 
     if (eta == 'minorenne') {
         let costo = (km * costo_km * 0.8);
