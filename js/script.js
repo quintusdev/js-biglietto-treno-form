@@ -21,7 +21,7 @@ submitBtn.addEventListener('click', function(){
 
     let codcp = Math.floor(Math.random() * 10000 + 1 );
 
-    if (eta == 'minorenne') {
+    if (eta == 'minorenne' && km > 0) {
         let costo = (km * costo_km * 0.8);
         let type_offer = 'Offerta Minorenni';
 
@@ -31,7 +31,7 @@ submitBtn.addEventListener('click', function(){
         document.getElementById('codcp').innerHTML = `${codcp}`;
         document.getElementById('costo').innerHTML = `${costo.toFixed(2) + "€"}`;
 
-    } else if (eta == 'over65'){
+    } else if (eta == 'over65' && km > 0){
 
         let costo = (km * costo_km * 0.4);
         let type_offer = 'Offerta Over 65 anni';
@@ -42,7 +42,7 @@ submitBtn.addEventListener('click', function(){
         document.getElementById('codcp').innerHTML = `${codcp}`;
         document.getElementById('costo').innerHTML = `${costo.toFixed(2) + "€"}`;
 
-    } else if (eta == 'maggiorenne') {
+    } else if (eta == 'maggiorenne' && km > 0) {
 
         let costo = (km * costo_km);
         let type_offer = 'Prezzo Biglietto Intero';
