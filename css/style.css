@@ -9,13 +9,21 @@ select {
     margin-top: 5px;
     font-family: cursive, sans-serif;
     outline: 0;
-    background: #cfcfcf;
-    color: #fff;
+    background: #fff;
+    color: #000;
     border: 1px solid black;
-    padding: 2px;
-    border-radius: 9px;
+    padding: 3px;
+    border-radius: 8px;
 }
 
 td {
     height: 50px;
+}
+
+.bg1 {
+    background-color: rgb(223, 176, 22);
+}
+
+.bg2 {
+    background-color: rgba(238, 206, 26, 0.808);
 }

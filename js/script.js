@@ -19,7 +19,7 @@ submitBtn.addEventListener('click', function(){
 
     let carrozza = Math.floor(Math.random() * 10 + 1 );
 
-    let codcp = Math.floor(Math.random(5) * 10 + 1 );
+    let codcp = Math.floor(Math.random() * 100 + 1 );
 
     if (eta == 'minorenne') {
         let costo = (km * costo_km * 0.8);
@@ -29,7 +29,7 @@ submitBtn.addEventListener('click', function(){
         document.getElementById('type_offer').innerHTML = `${type_offer}`;
         document.getElementById('carrozza').innerHTML = `${carrozza}`;
         document.getElementById('codcp').innerHTML = `${codcp}`;
-        document.getElementById('costo').innerHTML = `${costo}`;
+        document.getElementById('costo').innerHTML = `${costo.toFixed(2) + "€"}`;
 
     } else if (eta == 'over65'){
 
@@ -40,7 +40,7 @@ submitBtn.addEventListener('click', function(){
         document.getElementById('type_offer').innerHTML = `${type_offer}`;
         document.getElementById('carrozza').innerHTML = `${carrozza}`;
         document.getElementById('codcp').innerHTML = `${codcp}`;
-        document.getElementById('costo').innerHTML = `${costo}`;
+        document.getElementById('costo').innerHTML = `${costo.toFixed(2) + "€"}`;
 
     } else if (eta == 'maggiorenne') {
 
@@ -51,6 +51,6 @@ submitBtn.addEventListener('click', function(){
         document.getElementById('type_offer').innerHTML = `${type_offer}`;
         document.getElementById('carrozza').innerHTML = `${carrozza}`;
         document.getElementById('codcp').innerHTML = `${codcp}`;
-        document.getElementById('costo').innerHTML = `${costo}`;
+        document.getElementById('costo').innerHTML = `${costo.toFixed(2) + "€"}`;
     }
 })
