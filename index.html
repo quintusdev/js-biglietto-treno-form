@@ -10,28 +10,34 @@
 </head>
     <body>
         <main>
-            <div class="container-form">
-                <div class="row input-dati">
-                    <div class="col">
-                        <input type="text" name="name" id="user_name" placeholder="Inserisci il tuo nome e cognome">
-                    </div>
-                    <div class="col">
-                        <input type="number" name="km" id="km" placeholder="Inserisci km da percorrere">
-                    </div>
-                    <div class="col">
-                        <form action="#">
-                            <label for="title">Seleziona età:</label>
-                            <select name="eta" id="eta">
-                            <option value="minorenne">Minorenne</option>
-                            <option value="maggiorenne">Maggiorenne</option>
-                            <option value="over-65">più di 65 anni</option>
-                            </select>
-                        </form>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row g-4">
+                            <div class="col-auto">
+                                <input type="text" name="name" id="nome-utente" placeholder="Inserisci il tuo nome e cognome">
+                            </div>
+                            <div class="col-auto">
+                                <input type="text" name="km" id="km" placeholder="Inserisci km da percorrere">
+                            </div>
+                            <div class="col-auto">
+                                <form action="#">
+                                    <label for="title">Seleziona età:</label>
+                                    <select name="eta" id="eta">
+                                        <option value="minorenne">minorenne</option>
+                                        <option value="maggiorenne">maggiorenne</option>
+                                        <option value="over65">over 65</option>
+                                    </select>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
-                    <button type="submit" id="submit">Genera</button>
-                    <button type="reset">Annulla</button>
+                    <div class="col-12">
+                        <button type="button" id="submitButton">Genera</button>
+                        <button type="reset">Annulla</button>
+                    </div>
                 </div>
             </div>
             <div class="container-biglietto">
@@ -40,18 +46,20 @@
                         <table class="table">
                             <thead>
                               <tr>
-                                <th scope="col">Nome e Cognome <br> Passeggero</th>
+                                <th scope="col">Nome e Cognome</th>
                                 <th scope="col">Offerta</th>
                                 <th scope="col">Carrozza</th>
                                 <th scope="col">Codice CP</th>
-                                <th scope="col">Prezzo Biglietto</th>
+                                <th scope="col">Costo Biglietto</th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr>
-                                <td>(user_name)</td>
-                                <td></td>
-                                <td></td>
+                                <td id="nome_utente_bigl"></td>
+                                <td id="type_offer"></td>
+                                <td id="carrozza"></td>
+                                <td id="codcp"></td>
+                                <td id="costo"></td>
                               </tr>
                             </tbody>
                           </table>

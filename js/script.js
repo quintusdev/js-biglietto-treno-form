@@ -4,35 +4,53 @@
 
 const costo_km = 0.21;
 
-
 //NOME E COGNOME UTENTE
-let button = document.getElementById('submit');
+let submitBtn = document.getElementById('submitButton');
 
-button.addEventListener('click', function(){
+//CONTROLLO CHE IL PULSANTE NON SIA NULL
 
-    let user_name = document.getElementById('user_name').value;
-    console.log(user_name);
+submitBtn.addEventListener('click', function(){
+
+    let user_name = document.getElementById('nome-utente').value;
 
     let km = document.getElementById('km').value;
-    console.log(km);
 
     let eta = document.getElementById('eta').value;
-    console.log(eta);
+
+    let carrozza = Math.floor(Math.random() * 10 + 1 );
+
+    let codcp = Math.floor(Math.random(5) * 10 + 1 );
 
     if (eta == 'minorenne') {
+        let costo = (km * costo_km * 0.8);
+        let type_offer = 'Offerta Minorenni';
 
-        let pricemin = (km * costo_km * 0.8);
-        console.log(pricemin);
+        document.getElementById('nome_utente_bigl').innerHTML = `${user_name}`;
+        document.getElementById('type_offer').innerHTML = `${type_offer}`;
+        document.getElementById('carrozza').innerHTML = `${carrozza}`;
+        document.getElementById('codcp').innerHTML = `${codcp}`;
+        document.getElementById('costo').innerHTML = `${costo}`;
 
-    } else if (eta == 'over-65'){
+    } else if (eta == 'over65'){
 
-        let price65 = (km * costo_km * 0.4);
-        console.log(price65);
+        let costo = (km * costo_km * 0.4);
+        let type_offer = 'Offerta Over 65 anni';
+
+        document.getElementById('nome_utente_bigl').innerHTML = `${user_name}`;
+        document.getElementById('type_offer').innerHTML = `${type_offer}`;
+        document.getElementById('carrozza').innerHTML = `${carrozza}`;
+        document.getElementById('codcp').innerHTML = `${codcp}`;
+        document.getElementById('costo').innerHTML = `${costo}`;
 
     } else if (eta == 'maggiorenne') {
 
-        let prezzo_intero = (km * costo_km);
-        console.log(prezzo_intero); 
+        let costo = (km * costo_km);
+        let type_offer = 'Prezzo Biglietto Intero';
+
+        document.getElementById('nome_utente_bigl').innerHTML = `${user_name}`;
+        document.getElementById('type_offer').innerHTML = `${type_offer}`;
+        document.getElementById('carrozza').innerHTML = `${carrozza}`;
+        document.getElementById('codcp').innerHTML = `${codcp}`;
+        document.getElementById('costo').innerHTML = `${costo}`;
     }
 })
-

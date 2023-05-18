@@ -14,4 +14,8 @@ select {
     border: 1px solid black;
     padding: 2px;
     border-radius: 9px;
-  }
+}
+
+td {
+    height: 50px;
+}
