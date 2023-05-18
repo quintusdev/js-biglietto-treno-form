@@ -8,14 +8,6 @@ body {
     font-family: 'roboto', sans-serif;
 }
 
-button.rt {
-    margin-left: 100px;
-}
-
-td {
-    height: 50px;
-}
-
 .bg {
     background-color: #b91450;
 }
