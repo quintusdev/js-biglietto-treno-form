@@ -4,12 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
 
-    
-    
-    <script type="text/javascript" src="./js/script.js"></script>    
-</body>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Calcolo Prezzo Biglietto</title>
+</head>
+    <body>
+        <main>
+            <div class="container-form">
+                <div class="row input-dati">
+                    <div class="col">
+                        <input type="text" name="name" id="user_name" placeholder="Inserisci il tuo nome e cognome">
+                    </div>
+                    <div class="col">
+                        <input type="number" name="km" id="km" placeholder="Inserisci km da percorrere">
+                    </div>
+                    <div class="col">
+                        <form action="#">
+                            <label for="title">Seleziona età:</label>
+                            <select name="eta" id="eta">
+                            <option value="minorenne">Minorenne</option>
+                            <option value="maggiorenne">Maggiorenne</option>
+                            <option value="over-65">più di 65 anni</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <button type="submit" id="submit">Genera</button>
+                    <button type="reset">Annulla</button>
+                </div>
+            </div>
+            <div class="container-biglietto">
+                <div class="row">
+                    <div class="col-12">
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Nome e Cognome <br> Passeggero</th>
+                                <th scope="col">Offerta</th>
+                                <th scope="col">Carrozza</th>
+                                <th scope="col">Codice CP</th>
+                                <th scope="col">Prezzo Biglietto</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>(user_name)</td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script type="text/javascript" src="./js/script.js"></script>    
+    </body>
 </html>

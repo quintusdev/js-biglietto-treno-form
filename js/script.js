@@ -1,55 +1,38 @@
-//CALCOLO PREZZO BIGLIETTO TRENO
+// DATA ENTRY DA PARTE DELL'UTENTE
 
-//RICHIESTA KM DA PERCORRERE COL IL TRENO
-
-let km_utente = parseInt(prompt('Quanti chilometri devi percorrere?').trim());
-
-//RICHIESTA INSERIMENTO ETA' UTENTE
-
-let eta_utente = parseInt(prompt('Quanti anni hai?').trim());
-
-//CREAZIONE COSTANTE COSTO AL KM 
+//DICHIARAZIONE VARIABILI
 
 const costo_km = 0.21;
 
-//CALCOLO COSTO BIGLIETTO INTERO
 
-let prezzo_int = (km_utente * costo_km);
-let prezzo_intero = prezzo_int.toFixed(2);
+//NOME E COGNOME UTENTE
+let button = document.getElementById('submit');
 
-//CREZIONE VARIABILI PER CALCOLO SCONTO
+button.addEventListener('click', function(){
 
-let sconto_min;
-let over;
-let prezzo_scont1;
-let prezzo_scont2;
+    let user_name = document.getElementById('user_name').value;
+    console.log(user_name);
 
-//CALCOLO EVENTUALE SCONTO E VISUALIZZAZIONE PREZZO FINALE
+    let km = document.getElementById('km').value;
+    console.log(km);
 
-if (eta_utente < 18) {
-    
-        sconto_min = (prezzo_intero * 20 / 100);
-        prezzo_scont1 = (prezzo_intero - sconto_min);
+    let eta = document.getElementById('eta').value;
+    console.log(eta);
 
-        //CONVERSIONE IN DECIMALE A 2 CIFRE
-    let prezzo_scontato1 = prezzo_scont1.toFixed(2);
+    if (eta == 'minorenne') {
 
-        //VISUALIZZA PREZZO SCONTATO MINORENNI FINALE
-    alert("Il prezzo del tuo biglietto e' di: "+ prezzo_scontato1 + " €.");
+        let pricemin = (km * costo_km * 0.8);
+        console.log(pricemin);
 
-} else if (eta_utente >= 65) {
+    } else if (eta == 'over-65'){
 
-    over = (prezzo_intero * 40 / 100);
-    prezzo_scont2 = (prezzo_intero - over);
+        let price65 = (km * costo_km * 0.4);
+        console.log(price65);
 
-        //CONVERSIONE IN DECIMALE A 2 CIFRE
-    let prezzo_scontato2 = prezzo_scont2.toFixed(2);
-        
-        //VISUALIZZA PREZZO TOTALE OVER 65 FINALE
-    alert("Il prezzo del tuo biglietto e' di: " + prezzo_scontato2 +" €.");
-} else {
+    } else if (eta == 'maggiorenne') {
 
-        //VISUALIZZA PREZZO INTERO FINALE
-    alert("Il prezzo del tuo biglietto e' di: " + prezzo_intero +" €.");
-}
+        let prezzo_intero = (km * costo_km);
+        console.log(prezzo_intero); 
+    }
+})
 
